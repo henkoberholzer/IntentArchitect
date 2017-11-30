@@ -10,13 +10,13 @@ Intent Architect is a coding automation tool for software developers. It's based
 
 ## How does it work?
 
-All software systems, and this is particularly true of large enterprise systems, are composed of patterns. This code behind these patterns is often referred to as boilerplate code or plumbing. The more patternized a system is the more maintainable and robust it is. This is fairly well known and understood in the the software development industry.  The real challenges comes in around things like:-
+All software systems, and this is particularly true of large enterprise systems, are composed of patterns. The code behind these patterns is often referred to as boilerplate code or plumbing. The more patternized a system is the more maintainable and robust it is. This is fairly well known and understood in the software development industry.  The real challenges comes in around things like:-
 - **How to make sure the pattern is implemented consistently**, this often breaks down when people don't understand the original intent of the pattern, the technology, or simply implement it lazily.
 - **Refactoring the pattern**, once a pattern is implemented, refactoring the pattern can be an expensive exercise as you may need to change every instance of the pattern rather than the pattern itself.
 - **Changing technologies**, often changes in technologies result in changes to the supporting patterns themselves, this problem is analogous to *"Refactoring the pattern"* above.
 - **Doing the easy thing as opposed to the right thing**, sometimes we take shortcuts in design because we know that the implementation would be too onerous.
 
-Intent Architect is a continuous code generation tool which allows you to capture your application design and *integrates* that design back to your solution code to help you build better applications. It directly addresses the issues described above by allowing you to maintain and refactor your design directly, as opposed to hard coding it into your solutions. In this way you can maintain the design itself rather than the many fragmented and disjointed instances of your design present in your application.
+Intent Architect is a continuous code generation tool which allows you to capture your application design and *integrate* that design back to your solution code to help you build better applications. It directly addresses the issues described above by allowing you to maintain and refactor your design directly, as opposed to hard coding it into your solutions. In this way you can maintain the design itself rather than the many fragmented and disjointed instances of your design present in your application.
 
 Conceptually Intent Architect works in 3 steps:- 
 - Describe your application through Metadata
@@ -38,7 +38,7 @@ In this step you can describe your application or aspects of your application in
 - Inbound and outbound events
 - ANY other aspect of your application that you feel is appropriate
 
-Am I not just documenting my design? In principle yes, but unlike traditional documentation this is a living document which *integrates* into your actual source code. As you change your design (Metadata) your application source code changes. Through this process you capture the design intent of your application, rather than hard coding it into your application source code as it is traditionally done. This decoupling of the design intent from the actual source code makes refactoring or changing your designs easier. This is because you are literally changing the design rather then having to reverse engineer the design out of the source code and then refactor it.
+Am I not just documenting my design? In principle yes, but unlike traditional documentation this is a living document which *integrates* into your actual source code. As you change your design (Metadata) your application source code changes. Through this process you capture the design intent of your application, rather than hard coding it into your application source code as it is traditionally done. This decoupling of the design intent from the actual source code makes refactoring or changing your designs easier. This is because you are literally changing the design rather than having to reverse engineer the design out of the source code and then refactor it.
 
 Intent Architect has several Domain Specific Languages (DSLs) which you can use to model the application concepts described above. An example of such a DSL would be our integrated visual UML editor, which would typically be used to model your application domain.
 
@@ -46,7 +46,7 @@ Intent Architect has several Domain Specific Languages (DSLs) which you can use 
 ![Image of UML Model Sample](../../images/uml_modeller_sample.png)
 *UML Modelling DSL example*
 
-All the DSLs are fully extensible though a custom metadata extension system simply referred to as *stereotypes*. Stereotypes allow you to extend existing models and add your own custom data to the existing Metadata model. This would typically be data that is specific to your application or design. Should you wish to describe other aspects of your application, that Intent Architect does not have a DSL for, you can provide your own Metadata models. These Metadata models can be in whatever format you like, some examples may include JSON, XML or .NET source code. This can be done through creating your own `MetadataLoader` plugin.
+All the DSLs are fully extensible though a custom metadata extension system simply referred to as *stereotypes*. Stereotypes allow you to extend existing models and add your own custom data to the existing Metadata model. This would typically be data that is specific to your application or design. Should you wish to describe other aspects of your application, that Intent Architect does not have a DSL for, you can provide your own Metadata models. These Metadata models can be in whatever format you like, some examples may include JSON, XML or .NET source code. This can be done by creating your own `MetadataLoader` plugin.
 
 It is important to note you do not have to describe your entire application upfront, you can describe your application iteratively as you uncover the domain you are building for. 
 
@@ -67,7 +67,7 @@ The way you *choose your patterns* in Intent Architect is by installing Modules.
 Some additional points on modules:-
 - Modules are technically more than just collections of patterns and can be used to extend or enhance the code generation process.
 - Modules support configuration, allowing the developer to fine tune *how* and *what* they execute.
-- The outputs of the Modules can be mapping into your solutions using the application configuration screen. 
+- The outputs of the Modules can be mapping into your solutions using the application configuration screen.
 - These design patterns are often backed by a specific technology, a powerful side effect of this approach is that you have a clean loose coupling between your application and the underlying technologies through these Modules.
 
 ### Run the Software Factory
@@ -122,7 +122,7 @@ What does agile architecture mean? Literally the ability to refactor/change the 
 
 ### Encapsulated technology stacks
 
-Technology stacks or frameworks along with their supporting patterns are introduced to your application's architecture through Modules. A side effect of this is that the technology is now loosely coupled into to your application through the module and Intent Architect. The technology stack in encapsulated in the Module and can be managed through the Module, removing the Module removes the technology. The dependency between the various generated code artifacts and the module is maintained by Intent Architect. Traditionally the technology would be hard coded throughout your application with no easy way to remove it, short of manually tracking down every piece of code and removing it.
+Technology stacks or frameworks along with their supporting patterns are introduced to your application's architecture through Modules. A side effect of this is that the technology is now loosely coupled into to your application through the module and Intent Architect. The technology stack is encapsulated in the Module and can be managed through the Module, removing the Module removes the technology. The dependency between the various generated code artifacts and the module is maintained by Intent Architect. Traditionally the technology would be hard coded throughout your application with no easy way to remove it, short of manually tracking down every piece of code and removing it.
 
 > "Technologies or Frameworks can be encapsulated through Modules, making them easier to change, upgrade or swap out."
 
@@ -135,7 +135,7 @@ Being able to visualize your application design, without having to trawl through
 - Understand the design
 - Collaborate around the design
 
-As they say, a picture says a thousand words.
+As they say, a picture is worth a thousand words.
 
 > "Better understanding and visibility of the applications design."
 
@@ -170,7 +170,7 @@ Intent Architect is built to be a design time tool, just like your favourite IDE
 
 This is different from most other similar tools, which would have some form of lock-in. For example, Intent Architect has:-
 - No runtime that your code must execute in.
-- No proprietary framework dependencies .
+- No proprietary framework dependencies.
 - No generated code that is unmaintainable due to being unwieldy or poorly implemented, such that it's obviously not what a developer would have coded.
 
 > "Use the tool because it's adding value to you, not because your past decisions are holding you captive."
