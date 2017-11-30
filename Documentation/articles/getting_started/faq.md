@@ -31,7 +31,7 @@ These Modules are written outside of Intent Architect as plugins, and similar Mo
 
 ## Do I need to use T4 templates for my patterns?
 
-There is no requirement to use T4 templates. We typically use T4 templates ourselves and our SDK supplies T4 base classes templates, but you can use  any other technology you like, you simply need to implement the *ITemplate* interface.
+There is no requirement to use T4 templates. We typically use T4 templates ourselves and our SDK supplies T4 base classes templates, but you can use any other technology you like, you simply need to implement the *ITemplate* interface.
 
 ## What about Version Control / Source Control Management ?
 
@@ -39,12 +39,12 @@ Intent Architect is designed with this in mind, everything you interact with in 
 
 ## Isn't code generation fundamentally evil?
 
-We must admit we were initially very surprised to find there are people who have negative views on code generation, we have been exposed to various code generation techniques over the past 15 years and have generally had positive experiences. Out view is that it a tool, and just like any tool you need to know where it is appropriate to use and how to get the best use out of the tool. 
+We must admit we were initially very surprised to find there are people who have negative views on code generation, we have been exposed to various code generation techniques over the past 15 years and have generally had positive experiences. Our view is that it's simply a tool, and just like any tool you need to know where it is appropriate to use and how to get the best use out of the tool. 
 
 From the people we have spoken to, and from our own experience, code generation becomes problematic in the following scenarios:-
 - **Prescriptive code generated**, in these scenarios you have no control over the code being generated, it's a take it or leave it scenario.
 - **The code being generated is bad**, bad code is bad code, whether it is generated or not. Many code generation tools are very generic, resulting in poor code, it's obvious to spot the code wasn't hand written.
-- **Once off code generation**, this scenario isn't necessarily inherently bad, where it can be problematic is if you generate a lot of code which you later on realise you want/need to refactor. It's not obvious that code generation is the problem here as you could have hand coded it all, only to find yourself in the same position, some people will argue manually coding it might have forced you to rethink your implementation.
+- **Once off code generation**, this scenario isn't necessarily inherently bad, where it can be problematic is if you generate a lot of code which you later on realise you want/need to refactor. It's not obvious that code generation is the problem here as you could have hand coded it all, only to find yourself in the same position. Some people may argue that writing the code manually might have forced you to rethink your implementation at an earlier time.
 - **All or nothing code generation**, here it is difficult to deal with exceptional scenarios, which happen.
 
 With Intent Architect we have taken these learnings and tried to create a seamless code generation experience. Some of the factors which we believe set us apart include:-
